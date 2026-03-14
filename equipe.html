@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Équipe · A4P V6</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo-a4p.png" alt="A4P">
+      <h1>Plateforme A4P V6</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Vue club</a>
+      <a class="active" href="equipe.html?team=u18">Vue équipe</a>
+      <a href="joueur.html?player=u18-01">Vue joueur</a>
+      <a href="comparaison.html">Comparaisons</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h2 id="team-name">Équipe</h2>
+        <p id="team-category">Catégorie</p>
+      </div>
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Retour vue club</a>
+      </div>
+    </div>
+
+    <section class="grid kpi">
+      <article class="card kpi-card"><div class="label">Score équipe</div><div class="value" id="team-score">--</div><div class="sub">Moyenne derniers tests</div></article>
+      <article class="card kpi-card"><div class="label">Profil dominant</div><div class="value" id="team-profile">--</div><div class="sub">Lecture collective</div></article>
+      <article class="card kpi-card"><div class="label">Alertes actives</div><div class="value" id="team-alerts">--</div><div class="sub">Joueurs à suivre</div></article>
+      <article class="card kpi-card"><div class="label">Priorité staff</div><div class="value" id="team-priority">--</div><div class="sub">Dimension la plus faible</div></article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="section-title"><div><h3>Radar collectif</h3><p>Lecture moyenne actuelle de l'équipe.</p></div></div>
+        <div class="chart-box"><canvas id="team-radar"></canvas></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Progression saison</h3><p>Avant / après au fil des passations.</p></div></div>
+        <div class="chart-box"><canvas id="team-season"></canvas></div>
+      </article>
+    </section>
+
+    <section class="grid two" style="margin-top:18px;">
+      <article class="card">
+        <div class="section-title"><div><h3>Répartition des profils</h3><p>Dominantes mentales du groupe.</p></div></div>
+        <div id="profile-split" class="list"></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Comparaison rapide</h3><p>Repères staff immédiatement utiles.</p></div></div>
+        <div id="comparison-box" class="list"></div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Comparaison joueurs</h3><p>État actuel, dimensions et progression.</p></div></div>
+      <div class="table-wrap">
+        <table id="players-table">
+          <thead><tr><th>Joueur</th><th>Poste</th><th>Score</th><th>Confiance</th><th>Régulation</th><th>Engagement</th><th>Stabilité</th><th>Évolution</th><th>Alerte</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Synthèse staff avancée</h3><p>Utilisable telle quelle dans un compte-rendu.</p></div></div>
+      <p class="panel-note" id="staff-summary"></p>
+    </section>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/equipe.js"></script>
+</body>
+</html>

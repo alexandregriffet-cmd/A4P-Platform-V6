@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparaisons · A4P V6</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo-a4p.png" alt="A4P">
+      <h1>Plateforme A4P V6</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Vue club</a>
+      <a href="equipe.html?team=u18">Vue équipe</a>
+      <a href="joueur.html?player=u18-01">Vue joueur</a>
+      <a class="active" href="comparaison.html">Comparaisons</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h2>Comparaisons</h2>
+        <p>Comparer joueurs, équipes et dynamiques avant / après.</p>
+      </div>
+      <div class="filters">
+        <select id="compare-team"></select>
+        <select id="player-a"></select>
+        <select id="player-b"></select>
+      </div>
+    </div>
+
+    <section class="grid two">
+      <article class="card"><h3>Joueur A</h3><div id="compare-a" class="panel-note"></div></article>
+      <article class="card"><h3>Joueur B</h3><div id="compare-b" class="panel-note"></div></article>
+    </section>
+
+    <section class="grid two" style="margin-top:18px;">
+      <article class="card">
+        <div class="section-title"><div><h3>Comparaison par dimensions</h3><p>Lecture instantanée des écarts de ressources.</p></div></div>
+        <div class="chart-box"><canvas id="players-compare-chart"></canvas></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Comparaison équipes</h3><p>Score moyen actuel entre catégories.</p></div></div>
+        <div class="chart-box"><canvas id="teams-compare-chart"></canvas></div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Synthèse staff avancée</h3><p>Lecture de comparaison utile au coaching.</p></div></div>
+      <p class="panel-note" id="advanced-summary"></p>
+    </section>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/comparaison.js"></script>
+</body>
+</html>

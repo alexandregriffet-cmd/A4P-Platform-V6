@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4P Platform V6</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo-a4p.png" alt="A4P">
+      <h1>Plateforme A4P V6<br>Dashboard Club</h1>
+    </div>
+    <nav class="nav">
+      <a class="active" href="index.html">Vue club</a>
+      <a href="equipe.html?team=u18">Vue équipe</a>
+      <a href="joueur.html?player=u18-01">Vue joueur</a>
+      <a href="comparaison.html">Comparaisons</a>
+      <a href="https://alexandregriffet-cmd.github.io/PMP-A4P-Acad-mie-de-Performances-/">Module PMP</a>
+      <a href="https://alexandregriffet-cmd.github.io/CMP-A4P-ACADEMIE-DE-PERFORMANCES-/">Module CMP</a>
+      <a href="https://alexandregriffet-cmd.github.io/Module-psycho-motionnelle-/">Module Psycho</a>
+    </nav>
+    <small>V6 ajoute l'historique, les comparaisons avant/après, la progression saison, la comparaison joueurs et équipes, ainsi qu'une synthèse staff avancée.</small>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h2 id="club-name">Club</h2>
+        <p>Saison <span id="season-name"></span> · Pilotage mental collectif</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="equipe.html?team=u18">Ouvrir une équipe</a>
+        <a class="btn secondary" href="comparaison.html">Ouvrir les comparaisons</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h3>Vue staff centralisée</h3>
+      <p>Cette page donne une lecture immédiate de l'état mental collectif du club, des alertes prioritaires et des différences entre équipes. Elle sert de cockpit pour orienter les interventions, préparer les réunions staff et suivre la progression saisonnière.</p>
+    </section>
+
+    <section class="grid kpi">
+      <article class="card kpi-card"><div class="label">Score mental moyen</div><div class="value" id="kpi-score">--</div><div class="sub">Lecture club</div></article>
+      <article class="card kpi-card"><div class="label">Joueurs testés</div><div class="value" id="kpi-players">--</div><div class="sub">Base active</div></article>
+      <article class="card kpi-card"><div class="label">Joueurs en alerte</div><div class="value" id="kpi-alerts">--</div><div class="sub">Vigilance staff</div></article>
+      <article class="card kpi-card"><div class="label">Priorité de travail</div><div class="value" id="kpi-weakness">--</div><div class="sub">Dimension la plus fragile</div></article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="section-title"><div><h3>Radar global club</h3><p>Moyenne des derniers tests disponibles sur l'ensemble du club.</p></div></div>
+        <div class="chart-box"><canvas id="club-radar"></canvas></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Alertes actives</h3><p>Joueurs à surveiller en priorité.</p></div></div>
+        <div id="alerts-list" class="list"></div>
+      </article>
+    </section>
+
+    <section class="grid two" style="margin-top:18px;">
+      <article class="card">
+        <div class="section-title"><div><h3>Comparaison inter-équipes</h3><p>Score moyen actuel par équipe.</p></div></div>
+        <div class="small-chart"><canvas id="teams-compare"></canvas></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Synthèse staff avancée</h3><p>Texte prêt à être repris en réunion.</p></div></div>
+        <p class="panel-note" id="staff-summary"></p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Tableau de synthèse des équipes</h3><p>Ouverture directe vers les fiches détaillées.</p></div></div>
+      <div class="table-wrap">
+        <table id="teams-table">
+          <thead><tr><th>Équipe</th><th>Joueurs</th><th>Score moyen</th><th>Profil collectif dominant</th><th>Alertes</th><th>Action</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Données techniques</h3><p>Repliable et propre pour debug ou export.</p></div></div>
+      <details>
+        <summary class="badge">Afficher le JSON partagé</summary>
+        <pre id="raw-json" class="mono"></pre>
+      </details>
+    </section>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

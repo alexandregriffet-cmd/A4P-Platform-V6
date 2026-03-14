@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joueur · A4P V6</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo-a4p.png" alt="A4P">
+      <h1>Plateforme A4P V6</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Vue club</a>
+      <a href="equipe.html?team=u18">Vue équipe</a>
+      <a class="active" href="joueur.html?player=u18-01">Vue joueur</a>
+      <a href="comparaison.html">Comparaisons</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h2 id="player-name">Joueur</h2>
+        <p id="player-meta">Équipe · Poste</p>
+      </div>
+      <div class="actions">
+        <a class="btn secondary" href="javascript:history.back()">Retour</a>
+      </div>
+    </div>
+
+    <section class="grid kpi">
+      <article class="card kpi-card"><div class="label">Score actuel</div><div class="value" id="player-score">--</div><div class="sub">Dernier test</div></article>
+      <article class="card kpi-card"><div class="label">Profil</div><div class="value" id="player-profile">--</div><div class="sub">Lecture actuelle</div></article>
+      <article class="card kpi-card"><div class="label">Progression</div><div class="value" id="player-progress">--</div><div class="sub">Avant / après</div></article>
+      <article class="card kpi-card"><div class="label">Suivi</div><div class="value">3</div><div class="sub">Passations</div></article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="section-title"><div><h3>Radar individuel</h3><p>Lecture détaillée du dernier test.</p></div></div>
+        <div class="chart-box"><canvas id="player-radar"></canvas></div>
+      </article>
+      <article class="card">
+        <div class="section-title"><div><h3>Historique des tests</h3><p>Progression sur la saison.</p></div></div>
+        <div class="chart-box"><canvas id="player-history"></canvas></div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Comparaison avant / après</h3><p>Interprétation synthétique du parcours.</p></div></div>
+      <p class="panel-note" id="compare-summary"></p>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <div class="section-title"><div><h3>Historique détaillé</h3><p>Toutes les passations enregistrées.</p></div></div>
+      <div class="table-wrap">
+        <table id="history-table">
+          <thead><tr><th>Date</th><th>Score</th><th>Confiance</th><th>Régulation</th><th>Engagement</th><th>Stabilité</th><th>Profil</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/joueur.js"></script>
+</body>
+</html>
