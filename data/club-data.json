@@ -1,0 +1,101 @@
+{
+  "club": {
+    "name": "Académie de Performances - Démo Club",
+    "sport": "Rugby",
+    "season": "2025-2026",
+    "staff_note": "Données de démonstration V6 pour dashboard club A4P."
+  },
+  "teams": [
+    {
+      "id": "u18",
+      "name": "U18",
+      "category": "Jeunes",
+      "players": [
+        {
+          "id": "u18-01",
+          "firstName": "Lucas",
+          "lastName": "Martin",
+          "position": "Demi d'ouverture",
+          "tests": [
+            {"date": "2025-09-10", "module": "CMP", "score": 58, "dimensions": {"confiance": 55, "regulation": 46, "engagement": 72, "stabilite": 59}, "profil": "CMP-2"},
+            {"date": "2025-11-18", "module": "CMP", "score": 63, "dimensions": {"confiance": 60, "regulation": 52, "engagement": 74, "stabilite": 66}, "profil": "CMP-2"},
+            {"date": "2026-02-22", "module": "CMP", "score": 67, "dimensions": {"confiance": 65, "regulation": 56, "engagement": 77, "stabilite": 70}, "profil": "CMP-1"}
+          ]
+        },
+        {
+          "id": "u18-02",
+          "firstName": "Hugo",
+          "lastName": "Bernard",
+          "position": "Centre",
+          "tests": [
+            {"date": "2025-09-10", "module": "CMP", "score": 49, "dimensions": {"confiance": 42, "regulation": 39, "engagement": 66, "stabilite": 49}, "profil": "CMP-5"},
+            {"date": "2025-11-18", "module": "CMP", "score": 52, "dimensions": {"confiance": 46, "regulation": 41, "engagement": 68, "stabilite": 53}, "profil": "CMP-4"},
+            {"date": "2026-02-22", "module": "CMP", "score": 56, "dimensions": {"confiance": 50, "regulation": 45, "engagement": 70, "stabilite": 58}, "profil": "CMP-4"}
+          ]
+        },
+        {
+          "id": "u18-03",
+          "firstName": "Tom",
+          "lastName": "Dupuis",
+          "position": "Ailier",
+          "tests": [
+            {"date": "2025-09-10", "module": "CMP", "score": 68, "dimensions": {"confiance": 64, "regulation": 58, "engagement": 79, "stabilite": 71}, "profil": "CMP-1"},
+            {"date": "2025-11-18", "module": "CMP", "score": 70, "dimensions": {"confiance": 67, "regulation": 60, "engagement": 80, "stabilite": 73}, "profil": "CMP-1"},
+            {"date": "2026-02-22", "module": "CMP", "score": 73, "dimensions": {"confiance": 70, "regulation": 63, "engagement": 82, "stabilite": 76}, "profil": "CMP-1"}
+          ]
+        },
+        {
+          "id": "u18-04",
+          "firstName": "Noah",
+          "lastName": "Petit",
+          "position": "Troisième ligne",
+          "tests": [
+            {"date": "2025-09-10", "module": "CMP", "score": 61, "dimensions": {"confiance": 59, "regulation": 50, "engagement": 72, "stabilite": 63}, "profil": "CMP-2"},
+            {"date": "2025-11-18", "module": "CMP", "score": 64, "dimensions": {"confiance": 61, "regulation": 54, "engagement": 74, "stabilite": 67}, "profil": "CMP-2"},
+            {"date": "2026-02-22", "module": "CMP", "score": 66, "dimensions": {"confiance": 63, "regulation": 56, "engagement": 76, "stabilite": 69}, "profil": "CMP-2"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seniors",
+      "name": "Seniors",
+      "category": "Adultes",
+      "players": [
+        {
+          "id": "sen-01",
+          "firstName": "Pierre",
+          "lastName": "Dubois",
+          "position": "Talonneur",
+          "tests": [
+            {"date": "2025-09-15", "module": "CMP", "score": 66, "dimensions": {"confiance": 62, "regulation": 58, "engagement": 74, "stabilite": 69}, "profil": "CMP-1"},
+            {"date": "2025-12-01", "module": "CMP", "score": 68, "dimensions": {"confiance": 64, "regulation": 60, "engagement": 75, "stabilite": 71}, "profil": "CMP-1"},
+            {"date": "2026-02-28", "module": "CMP", "score": 71, "dimensions": {"confiance": 68, "regulation": 63, "engagement": 77, "stabilite": 74}, "profil": "CMP-1"}
+          ]
+        },
+        {
+          "id": "sen-02",
+          "firstName": "Maxime",
+          "lastName": "Roche",
+          "position": "Pilier",
+          "tests": [
+            {"date": "2025-09-15", "module": "CMP", "score": 54, "dimensions": {"confiance": 49, "regulation": 46, "engagement": 68, "stabilite": 53}, "profil": "CMP-4"},
+            {"date": "2025-12-01", "module": "CMP", "score": 57, "dimensions": {"confiance": 53, "regulation": 48, "engagement": 69, "stabilite": 58}, "profil": "CMP-4"},
+            {"date": "2026-02-28", "module": "CMP", "score": 59, "dimensions": {"confiance": 55, "regulation": 50, "engagement": 71, "stabilite": 60}, "profil": "CMP-3"}
+          ]
+        },
+        {
+          "id": "sen-03",
+          "firstName": "Antoine",
+          "lastName": "Legrand",
+          "position": "Arrière",
+          "tests": [
+            {"date": "2025-09-15", "module": "CMP", "score": 72, "dimensions": {"confiance": 70, "regulation": 63, "engagement": 79, "stabilite": 76}, "profil": "CMP-1"},
+            {"date": "2025-12-01", "module": "CMP", "score": 74, "dimensions": {"confiance": 72, "regulation": 65, "engagement": 80, "stabilite": 78}, "profil": "CMP-1"},
+            {"date": "2026-02-28", "module": "CMP", "score": 76, "dimensions": {"confiance": 74, "regulation": 67, "engagement": 82, "stabilite": 80}, "profil": "CMP-1"}
+          ]
+        }
+      ]
+    }
+  ]
+}
